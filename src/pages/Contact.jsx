@@ -67,6 +67,7 @@ function ContactForm() {
           name="name"
           value={form.name}
           onChange={handleChange}
+          placeholder="Your full name"
           className={`${inputBase} ${errors.name ? 'border-red-400 focus:border-red-500 focus:ring-red-500/20' : 'border-slate-300'}`}
         />
         {errors.name && <p className="text-[13px] text-red-500 mt-1.5">{errors.name}</p>}
@@ -82,6 +83,7 @@ function ContactForm() {
           name="email"
           value={form.email}
           onChange={handleChange}
+          placeholder="you@company.com"
           className={`${inputBase} ${errors.email ? 'border-red-400 focus:border-red-500 focus:ring-red-500/20' : 'border-slate-300'}`}
         />
         {errors.email && <p className="text-[13px] text-red-500 mt-1.5">{errors.email}</p>}
@@ -97,6 +99,7 @@ function ContactForm() {
           name="company"
           value={form.company}
           onChange={handleChange}
+          placeholder="Your company (optional)"
           className={`${inputBase} border-slate-300`}
         />
       </div>
@@ -111,6 +114,7 @@ function ContactForm() {
           name="phone"
           value={form.phone}
           onChange={handleChange}
+          placeholder="Your phone number (optional)"
           className={`${inputBase} border-slate-300`}
         />
       </div>
@@ -125,6 +129,7 @@ function ContactForm() {
           rows={5}
           value={form.message}
           onChange={handleChange}
+          placeholder="Tell us about your project or inquiry..."
           className={`${inputBase} resize-y ${errors.message ? 'border-red-400 focus:border-red-500 focus:ring-red-500/20' : 'border-slate-300'}`}
         />
         {errors.message && <p className="text-[13px] text-red-500 mt-1.5">{errors.message}</p>}
@@ -190,7 +195,7 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact | Lumarko Mining Innovations</title>
+        <title>Contact Us | Lumarko Mining Innovations</title>
         <meta name="description" content="Get in touch with Lumarko Mining Innovations. Fort McMurray, Alberta-based engineering and consulting for mining operations." />
       </Helmet>
 

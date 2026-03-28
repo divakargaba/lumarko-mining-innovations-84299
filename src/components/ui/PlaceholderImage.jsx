@@ -1,7 +1,7 @@
-export default function PlaceholderImage({ aspectRatio = '4/3', label = 'Image — Coming Soon', className = '' }) {
+export default function PlaceholderImage({ aspectRatio = '4/3', label = 'Image — Coming Soon', className = '', rounded = 'rounded-xl' }) {
   return (
     <div
-      className={`bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl flex items-center justify-center ${className}`}
+      className={`bg-slate-100 border-2 border-dashed border-slate-300 ${rounded} flex items-center justify-center ${className}`}
       style={{ aspectRatio }}
       role="img"
       aria-label={label}

@@ -10,7 +10,7 @@ import CTABanner from '../components/sections/CTABanner'
 
 function Hero() {
   return (
-    <section className="bg-navy-900 relative overflow-hidden min-h-[90vh] flex items-center py-24 lg:py-32">
+    <section className="bg-navy-900 relative overflow-hidden min-h-screen flex items-center pt-28 lg:pt-36 pb-16 lg:pb-20">
       {/* Grid pattern */}
       <div
         className="absolute inset-0 z-0"
@@ -52,11 +52,13 @@ function Hero() {
 
           {/* Right */}
           <div>
-            <PlaceholderImage
-              aspectRatio="4/3"
-              label="Hero Image — Coming Soon"
-              className="w-full max-w-lg lg:max-w-none"
-            />
+            <div className="w-full max-w-lg lg:max-w-none" style={{ aspectRatio: '4/3' }}>
+              <img
+                src="/images/tracktopper-crew.jpg"
+                alt="Mine site crew inspecting TrackTopper system"
+                className="w-full h-full rounded-xl object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -77,16 +79,18 @@ function CredibilityBar() {
   ]
 
   return (
-    <section className="bg-slate-50 border-y border-slate-200 py-6">
+    <section className="bg-slate-50 border-y border-slate-200 py-5">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x md:divide-slate-300">
-          {items.map((item, i) => (
-            <div key={i} className="flex items-center justify-center gap-3 py-2">
-              <item.icon className="w-5 h-5 text-steel-500" />
-              <span className="text-[15px] font-semibold text-navy-700">{item.text}</span>
-            </div>
-          ))}
-        </div>
+        <Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x md:divide-slate-300">
+            {items.map((item, i) => (
+              <div key={i} className="flex items-center justify-center gap-3 py-2">
+                <item.icon className="w-5 h-5 text-steel-500" />
+                <span className="text-[15px] font-semibold text-navy-700">{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   )
@@ -102,13 +106,13 @@ function AboutPreview() {
               ABOUT LUMARKO
             </p>
             <h2 className="font-heading font-bold text-navy-700 text-[32px] leading-[40px] lg:text-[38px] lg:leading-[46px] mb-6">
-              25 Years of Field Experience. One Mission.
+              Technology-Driven. Field-Proven. Results-Oriented.
             </h2>
             <p className="text-[16px] leading-[26px] text-slate-600 mb-4">
-              Lumarko Mining Innovations was founded on a simple belief: the best solutions come from people who&apos;ve worked the field, not just studied it. With over 25 years of hands-on experience in Canada&apos;s oil sands, we partner directly with mine operators to improve safety, productivity, reliability, and cost performance.
+              Lumarko Mining Innovations (LMI) is a technology-driven company focused on helping large-scale mining operations achieve higher levels of operational excellence. Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada.
             </p>
             <p className="text-[16px] leading-[26px] text-slate-600 mb-8">
-              Our 100-Day Value Cycle is how we operate — rapid validation, disciplined execution, and measurable results. Every initiative we take on is designed to deliver real impact, fast. No bloated timelines, no shelved reports.
+              Powered by our proprietary 100-Day Value Cycle, we enable rapid execution and measurable impact. LMI is currently scaling its team and expanding operations to support mining operators nationwide.
             </p>
             <Link
               to="/about"
@@ -119,11 +123,13 @@ function AboutPreview() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <PlaceholderImage
-              aspectRatio="4/3"
-              label="About Photo — Coming Soon"
-              className="w-full rounded-xl"
-            />
+            <div className="w-full rounded-xl bg-white border border-slate-200 overflow-hidden flex items-center justify-center p-6" style={{ aspectRatio: '4/3' }}>
+              <img
+                src="/images/Lumarko.jpg"
+                alt="Lumarko Mining Innovations team"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
           </Reveal>
         </div>
       </div>
@@ -137,11 +143,13 @@ function TrackTopperShowcase() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <Reveal>
-            <PlaceholderImage
-              aspectRatio="4/3"
-              label="TrackTopper Photo — Coming Soon"
-              className="w-full rounded-xl"
-            />
+            <div className="w-full" style={{ aspectRatio: '4/3' }}>
+              <img
+                src="/images/tracktopper-platform.jpg"
+                alt="TrackTopper non-slip platform system deployed on dozer track"
+                className="w-full h-full rounded-xl object-cover"
+              />
+            </div>
           </Reveal>
 
           <Reveal delay={0.1}>
@@ -171,12 +179,14 @@ function TrackTopperShowcase() {
 function Partnerships() {
   const cards = [
     {
-      logo: 'Imperial Oil Logo',
+      logo: '/images/Imperial.jpg',
+      logoAlt: 'Imperial Oil logo',
       title: 'Strategic Partner — Imperial Oil',
       text: "Through our partnership with Imperial Oil, we\u2019ve collaborated on multiple game-changing initiatives including the award-winning TrackTopper System. This relationship is built on trust and strong connections from the field level upward.",
     },
     {
-      logo: 'Oil Sands Expo Logo',
+      logo: '/images/OilSands.jpg',
+      logoAlt: 'Oil Sands Expo logo',
       title: 'Advisory Board — Oil Sands Expo',
       text: "Tony Bessey serves on the Advisory Board for Canada\u2019s leading oil sands event, leveraging 25+ years of industry experience to help shape the Expo\u2019s direction and advance the future of the oil sands sector.",
     },
@@ -191,16 +201,16 @@ function Partnerships() {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cards.map((card, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <Card>
-                <div className="p-7 lg:p-8">
-                  <div className="w-full h-14 bg-slate-100 rounded-lg flex items-center justify-center text-slate-400 text-[13px] font-medium mb-6">
-                    [{card.logo}]
+            <Reveal key={i} delay={i * 0.1} className="h-full">
+              <Card hover className="h-full">
+                <div className="p-7 lg:p-8 flex flex-col h-full">
+                  <div className="w-full h-20 bg-slate-50 rounded-lg flex items-center justify-center mb-6 px-4">
+                    <img src={card.logo} alt={card.logoAlt} className="max-h-14 w-auto object-contain mx-auto" />
                   </div>
                   <h3 className="font-heading font-bold text-navy-700 text-[20px] mb-3">
                     {card.title}
                   </h3>
-                  <p className="text-[15px] leading-[25px] text-slate-600">
+                  <p className="text-[15px] leading-[25px] text-slate-600 flex-grow">
                     {card.text}
                   </p>
                 </div>
@@ -217,7 +227,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Lumarko Mining Innovations | Operational Excellence for Mining</title>
+        <title>Lumarko Mining Innovations</title>
         <meta name="description" content="Lumarko Mining Innovations partners with Canada's leading mining operators to deliver practical, field-driven solutions that enhance safety, reliability, and operational performance." />
       </Helmet>
 

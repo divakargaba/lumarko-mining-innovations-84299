@@ -57,8 +57,8 @@ export default function Navbar() {
               to="/contact"
               className={`px-5 py-2.5 rounded-lg text-[14px] font-semibold transition-all duration-200 ${
                 solid
-                  ? 'border-2 border-steel-500 text-steel-500 hover:bg-steel-500 hover:text-white'
-                  : 'bg-steel-500 text-white hover:bg-steel-400'
+                  ? 'bg-[#4A8DB7] text-white hover:bg-[#3A7DA7] shadow-sm'
+                  : 'border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10'
               }`}
             >
               Contact

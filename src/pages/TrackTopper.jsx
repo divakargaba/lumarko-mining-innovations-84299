@@ -1,19 +1,21 @@
 import { Helmet } from 'react-helmet-async'
 import { Trophy } from 'lucide-react'
 import PageHeader from '../components/ui/PageHeader'
-import PlaceholderImage from '../components/ui/PlaceholderImage'
+
 import Reveal from '../components/ui/Reveal'
 import CTABanner from '../components/sections/CTABanner'
 
 function HeroImage() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-10 lg:py-14">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
-        <PlaceholderImage
-          aspectRatio="16/9"
-          label="TrackTopper Hero Image — Coming Soon"
-          className="w-full rounded-xl"
-        />
+        <div className="w-full" style={{ aspectRatio: '16/9' }}>
+          <img
+            src="/images/tracktopper-dozer.jpg"
+            alt="CAT dozer equipped with TrackTopper system in maintenance bay"
+            className="w-full h-full rounded-xl object-cover"
+          />
+        </div>
       </div>
     </section>
   )
@@ -50,16 +52,66 @@ function Solution() {
         </Reveal>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {[1, 2, 3, 4].map((n) => (
-            <Reveal key={n} delay={n * 0.1}>
-              <PlaceholderImage
-                aspectRatio="4/3"
-                label={`TrackTopper Detail Photo ${n}`}
-                className="w-full rounded-lg"
-              />
+          {[
+            { src: '/images/tracktopper-detail.jpg', alt: 'TrackTopper rail and clamp mechanism close-up' },
+            { src: '/images/tracktopper-platform.jpg', alt: 'TrackTopper non-slip platform on dozer track' },
+            { src: '/images/tracktopper-crew.jpg', alt: 'Crew inspecting TrackTopper installation' },
+            { src: '/images/tracktopper-dozer.jpg', alt: 'Full dozer with TrackTopper system' },
+          ].map((photo, i) => (
+            <Reveal key={i} delay={(i + 1) * 0.1}>
+              <div className="w-full" style={{ aspectRatio: '4/3' }}>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-full rounded-lg object-cover"
+                />
+              </div>
             </Reveal>
           ))}
         </div>
+      </div>
+    </section>
+  )
+}
+
+function HumanImpact() {
+  return (
+    <section className="bg-white py-16 lg:py-20">
+      <div className="max-w-3xl mx-auto px-6 sm:px-8">
+        <Reveal>
+          <h2 className="font-heading font-bold text-navy-700 text-[30px] leading-[38px] mb-6">
+            The Human Impact
+          </h2>
+          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+            The introduction of the TrackTopper System has fundamentally changed how Heavy Equipment Technicians feel at work — replacing uncertainty with confidence, and risk with trust.
+          </p>
+          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+            For the first time in years, technicians can step onto equipment without that underlying tension in the back of their mind. The job feels more controlled, more predictable. There&apos;s a sense of stability — of being supported by the environment around them, not fighting against it.
+          </p>
+          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+            That shift creates something powerful: peace of mind.
+          </p>
+          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+            Crews go home at the end of the day carrying less stress. Families feel it too — because the work no longer carries the same level of unseen risk. What used to be accepted as &quot;part of the job&quot; is no longer tolerated, and that changes the emotional contract between the workforce and the operation.
+          </p>
+          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+            There&apos;s also a renewed sense of professional pride. When technicians are given tools and systems that reflect the importance of their safety, it reinforces that their work matters — that they matter. It elevates the standard of what a modern mine site should feel like.
+          </p>
+          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+            At an organizational level, this translates into trust and belief:
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-[16px] leading-[28px] text-slate-600 mb-5">
+            <li>Trust that leadership is serious about safety — not in words, but in action</li>
+            <li>Belief that meaningful change is possible, and can happen quickly</li>
+            <li>Confidence that innovation can genuinely improve daily life on site</li>
+          </ul>
+          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+            For Lumarko Mining Innovations, this is the real value we create.
+          </p>
+          <p className="text-[16px] leading-[28px] text-slate-600">
+            Beyond performance metrics and operational gains, we help build environments where people feel safer, more confident, and more respected in the work they do — every single shift. That&apos;s what operational excellence feels like.
+          </p>
+        </Reveal>
       </div>
     </section>
   )
@@ -82,11 +134,13 @@ function Award() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <PlaceholderImage
-              aspectRatio="4/3"
-              label="Award Photo / CIM Logo — Coming Soon"
-              className="w-full rounded-xl"
-            />
+            <div className="w-full rounded-xl bg-slate-900 overflow-hidden flex items-center justify-center" style={{ aspectRatio: '4/3' }}>
+              <img
+                src="/images/cim-award.jpg"
+                alt="CIM Mine Safety Technology Award ceremony"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
           </Reveal>
         </div>
       </div>
@@ -114,6 +168,7 @@ export default function TrackTopper() {
       <HeroImage />
       <Problem />
       <Solution />
+      <HumanImpact />
       <Award />
       <CTABanner
         heading="Want to see how TrackTopper can work on your site?"

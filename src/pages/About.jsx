@@ -10,28 +10,13 @@ function CompanyStory() {
       <div className="max-w-3xl mx-auto px-6 sm:px-8">
         <Reveal>
           <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
-            Lumarko Mining Innovations is a Fort McMurray-based company that helps mining operations run safer, more reliably, and at a higher level. We&apos;ve been in the oil sands for over 25 years and we work directly with mine operators to fix real problems on site — not from a boardroom, but from the field.
+            Lumarko Mining Innovations (LMI) is a technology-driven company focused on helping large-scale mining operations achieve higher levels of operational excellence.
           </p>
-
-          <h2 className="font-heading font-bold text-navy-700 text-[24px] leading-[32px] mt-14 mb-5">
-            What We Do
-          </h2>
           <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
-            We combine engineering expertise, operational experience, and manufacturing capability to deliver solutions that make a measurable difference on mine sites across Canada. Our work spans safety systems, operational excellence consulting, and purpose-built products for heavy mining equipment.
+            Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada. By combining engineering expertise, real-world field experience, and in-house manufacturing, we deliver practical, results-oriented solutions that enhance safety, productivity, equipment reliability, and cost performance.
           </p>
-
-          <h2 className="font-heading font-bold text-navy-700 text-[24px] leading-[32px] mt-14 mb-5">
-            How We Work — The 100-Day Value Cycle
-          </h2>
-          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
-            At the core of everything we do is our 100-Day Value Cycle. It&apos;s our fit-for-purpose model designed to deliver rapid validation, disciplined execution, and measurable results. We built it because we&apos;ve seen too many good initiatives die slow deaths in committees and approval chains. Our approach is simple: prove it works fast, execute with discipline, and measure what matters. No fluff, no failed rollouts.
-          </p>
-
-          <h2 className="font-heading font-bold text-navy-700 text-[24px] leading-[32px] mt-14 mb-5">
-            Our Partnerships
-          </h2>
           <p className="text-[16px] leading-[28px] text-slate-600">
-            We&apos;re proud to be a strategic partner with Imperial Oil. Through this relationship, we&apos;ve collaborated on multiple game-changing initiatives, including the award-winning TrackTopper System. This partnership is built on trust and strong connections from the field level upward, enabling us to co-create practical, operations-driven solutions.
+            Powered by our proprietary 100-Day Value Cycle, we enable rapid execution and measurable impact. LMI is currently scaling its team and expanding operations to support mining operators nationwide.
           </p>
         </Reveal>
       </div>
@@ -59,12 +44,12 @@ function Values() {
   ]
 
   return (
-    <section className="bg-slate-50 py-20 lg:py-28">
+    <section className="bg-[#F3F4F6] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pillars.map((pillar, i) => (
-            <Reveal key={pillar.title} delay={i * 0.1}>
-              <Card>
+            <Reveal key={pillar.title} delay={i * 0.1} className="h-full">
+              <Card hover className="h-full">
                 <div className="p-7 lg:p-8">
                   <pillar.icon className="w-10 h-10 text-steel-500 mb-5" />
                   <h3 className="font-heading font-bold text-navy-700 text-[20px] mb-3">

@@ -7,6 +7,16 @@
     <title>Lumarko Mining Innovations</title>
   </head>
   <body>
+    <!-- Hidden Netlify form for bot detection -->
+    <form name="job-application" netlify netlify-honeypot="bot-field" hidden>
+      <input name="form-name" type="hidden" value="job-application" />
+      <input name="position" type="text" />
+      <input name="fullName" type="text" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <input name="resume" type="file" />
+      <textarea name="coverLetter"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

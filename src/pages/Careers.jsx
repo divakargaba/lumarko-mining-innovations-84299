@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
+import { Send, CheckCircle, Paperclip } from 'lucide-react'
 import PageHeader from '../components/ui/PageHeader'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
@@ -122,6 +124,166 @@ function JobDescription() {
   )
 }
 
+function ApplicationForm() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [errors, setErrors] = useState({})
+  const [fileName, setFileName] = useState('')
+
+  const inputBase = 'w-full px-4 py-3 bg-white border rounded-lg text-[15px] text-slate-800 placeholder-slate-400 focus:border-steel-500 focus:ring-2 focus:ring-steel-500/20 focus:outline-none transition-all duration-200'
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    const errs = {}
+    if (!form.fullName.value.trim()) errs.fullName = 'Full name is required.'
+    if (!form.email.value.trim()) errs.email = 'Email is required.'
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value)) errs.email = 'Please enter a valid email.'
+    if (!form.resume.files.length) errs.resume = 'Please attach your resume.'
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs)
+      return
+    }
+    setErrors({})
+
+    const formData = new FormData(form)
+    fetch('/', {
+      method: 'POST',
+      body: formData,
+    })
+      .then(() => setSubmitted(true))
+      .catch(() => setSubmitted(true))
+  }
+
+  if (!isOpen) {
+    return (
+      <Button onClick={() => setIsOpen(true)} variant="primary">
+        Apply Now
+      </Button>
+    )
+  }
+
+  if (submitted) {
+    return (
+      <div className="mt-6 bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+        <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
+        <h3 className="font-heading font-semibold text-[18px] text-green-800 mb-2">Application Submitted</h3>
+        <p className="text-[15px] text-green-700">Thanks for applying! We&apos;ll review your application and get back to you soon.</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="mt-6 border-t border-slate-200 pt-8">
+      <h4 className="font-heading font-bold text-navy-700 text-[20px] mb-6">Apply for this Position</h4>
+      <form
+        name="job-application"
+        method="POST"
+        data-netlify="true"
+        encType="multipart/form-data"
+        onSubmit={handleSubmit}
+        noValidate
+      >
+        <input type="hidden" name="form-name" value="job-application" />
+        <input type="hidden" name="position" value="Business Operations Manager" />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label htmlFor="app-name" className="block text-[14px] font-semibold text-slate-700 mb-2">
+              Full Name <span className="text-red-500 ml-0.5">*</span>
+            </label>
+            <input
+              type="text"
+              id="app-name"
+              name="fullName"
+              placeholder="Your full name"
+              className={`${inputBase} ${errors.fullName ? 'border-red-400' : 'border-slate-300'}`}
+            />
+            {errors.fullName && <p className="text-[13px] text-red-500 mt-1.5">{errors.fullName}</p>}
+          </div>
+          <div>
+            <label htmlFor="app-email" className="block text-[14px] font-semibold text-slate-700 mb-2">
+              Email Address <span className="text-red-500 ml-0.5">*</span>
+            </label>
+            <input
+              type="email"
+              id="app-email"
+              name="email"
+              placeholder="you@example.com"
+              className={`${inputBase} ${errors.email ? 'border-red-400' : 'border-slate-300'}`}
+            />
+            {errors.email && <p className="text-[13px] text-red-500 mt-1.5">{errors.email}</p>}
+          </div>
+        </div>
+
+        <div className="mb-5">
+          <label htmlFor="app-phone" className="block text-[14px] font-semibold text-slate-700 mb-2">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            id="app-phone"
+            name="phone"
+            placeholder="Your phone number (optional)"
+            className={`${inputBase} border-slate-300`}
+          />
+        </div>
+
+        <div className="mb-5">
+          <label htmlFor="app-resume" className="block text-[14px] font-semibold text-slate-700 mb-2">
+            Resume <span className="text-red-500 ml-0.5">*</span>
+          </label>
+          <label
+            htmlFor="app-resume"
+            className={`flex items-center gap-3 px-4 py-3 border-2 border-dashed rounded-lg cursor-pointer transition-colors hover:border-steel-500 hover:bg-steel-100/30 ${errors.resume ? 'border-red-400' : 'border-slate-300'}`}
+          >
+            <Paperclip className="w-5 h-5 text-slate-400" />
+            <span className="text-[15px] text-slate-500">
+              {fileName || 'Upload your resume (PDF, DOC, DOCX)'}
+            </span>
+          </label>
+          <input
+            type="file"
+            id="app-resume"
+            name="resume"
+            accept=".pdf,.doc,.docx"
+            className="hidden"
+            onChange={(e) => setFileName(e.target.files[0]?.name || '')}
+          />
+          {errors.resume && <p className="text-[13px] text-red-500 mt-1.5">{errors.resume}</p>}
+        </div>
+
+        <div className="mb-5">
+          <label htmlFor="app-cover" className="block text-[14px] font-semibold text-slate-700 mb-2">
+            Cover Letter / Message
+          </label>
+          <textarea
+            id="app-cover"
+            name="coverLetter"
+            rows={5}
+            placeholder="Tell us why you're interested in this role..."
+            className={`${inputBase} border-slate-300 resize-y`}
+          />
+        </div>
+
+        <div className="flex items-center gap-4">
+          <Button type="submit" variant="primary">
+            <Send className="w-4 h-4" />
+            Submit Application
+          </Button>
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="text-[14px] text-slate-500 hover:text-slate-700 transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  )
+}
+
 function JobListings() {
   return (
     <section className="bg-slate-50 py-16 lg:py-20">
@@ -164,12 +326,7 @@ function JobListings() {
                 </Accordion>
               </div>
 
-              <Button
-                href="mailto:Tony@Lumarko.ca?subject=Application%3A%20Business%20Operations%20Manager"
-                variant="primary"
-              >
-                Apply Now
-              </Button>
+              <ApplicationForm />
             </div>
           </Card>
         </Reveal>
