@@ -6,7 +6,7 @@ import LMILogo from './LMILogo'
 const links = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
-  { to: '/tracktopper', label: 'TrackTopper' },
+  { to: '/value-cycle', label: '100-Day Value Cycle' },
   { to: '/team', label: 'Team' },
   { to: '/careers', label: 'Careers' },
 ]

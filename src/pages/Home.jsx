@@ -33,19 +33,17 @@ function Hero() {
             </div>
 
             <h1 className="font-heading font-extrabold text-white text-[40px] leading-[48px] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px] mb-6">
-              Operational Excellence for Mining. Built from the Field Up.
+              Forged in the Field. Engineered to Outperform.<br />
+              <span className="text-steel-400">Built by Operations. Proven in the Field.</span>
             </h1>
 
             <p className="text-[17px] lg:text-[18px] leading-[28px] text-slate-300 max-w-xl mb-10">
-              Lumarko Mining Innovations partners with Canada&apos;s leading mining operators to deliver practical, field-driven solutions that enhance safety, reliability, and operational performance.
+              Practical solutions developed by the teams maintaining and operating Canada&apos;s oil sands—driving real performance where it matters most.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
               <Button to="/contact" variant="primary" className="py-3.5">
                 Get in Touch
-              </Button>
-              <Button to="/tracktopper" variant="outline" className="py-3.5">
-                Learn About TrackTopper
               </Button>
             </div>
           </div>
