@@ -6,6 +6,7 @@ import ScrollToTop from './components/layout/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import TrackTopper from './pages/TrackTopper'
+import ValueCycle from './pages/ValueCycle'
 import Team from './pages/Team'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/tracktopper" element={<TrackTopper />} />
+            <Route path="/value-cycle" element={<ValueCycle />} />
             <Route path="/team" element={<Team />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
