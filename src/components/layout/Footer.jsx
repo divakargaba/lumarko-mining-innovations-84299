@@ -13,16 +13,16 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-900 py-16 lg:py-20">
+    <footer className="bg-white border-t border-slate-200 py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand */}
           <div>
-            <LMILogo light />
-            <p className="mt-4 text-[15px] text-slate-400 leading-relaxed">
+            <LMILogo />
+            <p className="mt-4 text-[15px] text-slate-500 leading-relaxed">
               Operational excellence for mining. Built from the field up.
             </p>
-            <p className="mt-4 text-[14px] text-slate-500">
+            <p className="mt-4 text-[14px] text-slate-400">
               #271, 220 TaigaNova Crescent<br />
               Fort McMurray, Alberta T9K 0N9
             </p>
@@ -38,7 +38,7 @@ export default function Footer() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-[15px] text-slate-400 hover:text-white transition-colors"
+                  className="text-[15px] text-slate-500 hover:text-navy-900 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -54,13 +54,13 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <a
                 href="mailto:Tony@Lumarko.ca"
-                className="text-[15px] text-slate-400 hover:text-white transition-colors"
+                className="text-[15px] text-slate-500 hover:text-navy-900 transition-colors"
               >
                 Tony@Lumarko.ca
               </a>
               <a
                 href="tel:4036804965"
-                className="text-[15px] text-slate-400 hover:text-white transition-colors"
+                className="text-[15px] text-slate-500 hover:text-navy-900 transition-colors"
               >
                 403-680-4965
               </a>
@@ -74,7 +74,7 @@ export default function Footer() {
             </h4>
             <a
               href="#"
-              className="inline-flex items-center gap-2 text-[15px] text-slate-400 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-[15px] text-slate-500 hover:text-navy-900 transition-colors"
               aria-label="Lumarko Mining Innovations on LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
@@ -84,8 +84,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-navy-700 mt-12 pt-8">
-          <p className="text-center text-[14px] text-slate-500">
+        <div className="border-t border-slate-200 mt-12 pt-8">
+          <p className="text-center text-[14px] text-slate-400">
             &copy; 2026 Lumarko Mining Innovations. All rights reserved.
           </p>
         </div>
