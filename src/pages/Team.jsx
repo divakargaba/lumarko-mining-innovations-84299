@@ -24,8 +24,8 @@ const team = [
     name: 'Shawn Carnes',
     title: 'VP of Operational Excellence',
     photo: '/images/Shawn.jpg',
-    bio: 'Bio and photo coming soon.',
-    linkedin: null,
+    bio: 'A former Skeleton athlete who competed at the highest North American level, Shawn brings a performance mindset built on precision, resilience, and execution under pressure.\n\nWith 15+ years of leadership across maintenance, planning, process optimization, and continuous improvement, Shawn progressed from frontline technical roles into senior operational strategy positions.\n\nShawn has partnered with cross-functional teams to deliver major operational excellence and transformation initiatives at CNRL and Suncor, strengthening reliability, execution systems, and continuous improvement at scale.\n\nAt Lumarko, Shawn drives execution governance, capital discipline, and value realization across the innovation portfolio.\n\nHis focus is aligning strategy with execution to deliver predictable, high-impact outcomes in complex operational environments.',
+    linkedin: 'https://www.linkedin.com/in/shawn-carnes-5a22428a/',
   },
 ]
 
@@ -64,9 +64,11 @@ export default function Team() {
                         {member.title}
                       </p>
                     </div>
-                    <p className="text-[15px] leading-[24px] text-slate-600 text-left flex-grow">
-                      {member.bio}
-                    </p>
+                    <div className="text-[15px] leading-[24px] text-slate-600 text-left flex-grow space-y-3">
+                      {member.bio.split('\n\n').map((para, idx) => (
+                        <p key={idx}>{para}</p>
+                      ))}
+                    </div>
                     {member.linkedin && (
                       <div className="text-center mt-4">
                         <a

@@ -33,8 +33,7 @@ function Hero() {
             </div>
 
             <h1 className="font-heading font-extrabold text-white text-[40px] leading-[48px] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px] mb-6">
-              Forged in the Field. Engineered to Outperform.<br />
-              <span className="text-steel-400">Built by Operations. Proven in the Field.</span>
+              Forged in the Field. Engineered to Outperform.
             </h1>
 
             <p className="text-[17px] lg:text-[18px] leading-[28px] text-slate-300 max-w-xl mb-10">
