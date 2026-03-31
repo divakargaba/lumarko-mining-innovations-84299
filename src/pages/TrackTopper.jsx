@@ -29,8 +29,11 @@ function Problem() {
           <h2 className="font-heading font-bold text-navy-700 text-[30px] leading-[38px] mb-6">
             The Problem
           </h2>
+          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+            Heavy Equipment Technicians have long been exposed to preventable safety and ergonomic risks when performing maintenance and repair tasks on equipment tracks. Traditional methods—reliant on planks, flimsy boards, coconut mats (which introduce additional hazards for welders), layered mats, and improvised scaffolding—have proven unstable, inconsistent, and inadequate for safe, efficient work. While the industry has historically accepted these risks as part of the job, the underlying problem was clear: the absence of a purpose-built, adaptable, and reliable work platform capable of addressing seasonal track variations, including elevated ice lugs in winter and direct grouser access in summer.
+          </p>
           <p className="text-[16px] leading-[28px] text-slate-600">
-            Maintaining and servicing heavy mining equipment — particularly undercarriage components on large tracked machines — has always presented significant safety risks. Technicians work in confined, high-risk environments where the potential for injury is constant. Traditional maintenance approaches accept this risk as part of the job. We didn&apos;t.
+            This problem has now been addressed through the development of the TrackTopper system—challenging the status quo by delivering a stable, user-friendly, and safety-focused solution that eliminates the need to accept unnecessary risk.
           </p>
         </Reveal>
       </div>
