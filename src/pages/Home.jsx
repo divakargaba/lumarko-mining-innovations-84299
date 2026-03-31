@@ -96,7 +96,7 @@ function AboutPreview() {
               Frontline-driven, technology-enabled, results-focused.
             </h2>
             <p className="text-[16px] leading-[26px] text-slate-600 mb-8">
-              Lumarko Mining Innovations (LMI) is a technology-driven company focused on helping large-scale mining operations achieve higher levels of operational excellence. Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada.
+              Lumarko Mining Innovations (LMI) is a technology-driven company focused on helping large-scale mining producers achieve higher levels of operational excellence. Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada.
             </p>
             <Link
               to="/about"

@@ -17,7 +17,7 @@ const team = [
     name: 'Caitlin Hartigan',
     title: 'Senior Commercial Advisor',
     photo: '/images/Caitlin.jpg',
-    bio: "Caitlin Hartigan is an accomplished post-secondary and business development leader with extensive experience supporting the skilled trades, heavy industry, and the oil and gas sector across Western Canada. Her background includes leading strategic program delivery, advancing industry partnerships, and driving client success across a diverse portfolio of training pathways aligned with energy, construction, and industrial workforce needs.",
+    bio: "Caitlin is an accomplished post-secondary and business development leader with extensive experience supporting the skilled trades, heavy industry, and the oil and gas sector across Western Canada. Her background includes leading strategic program delivery, advancing industry partnerships, and driving client success across a diverse portfolio of training pathways aligned with energy, construction, and industrial workforce needs.",
     linkedin: '#',
   },
   {
