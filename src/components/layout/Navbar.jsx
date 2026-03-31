@@ -32,9 +32,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300 ${solid ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <nav className="fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
-          <LMILogo light={!solid} />
+          <LMILogo />
 
           {/* Desktop */}
           <div className="hidden lg:flex items-center gap-8">
@@ -45,9 +45,7 @@ export default function Navbar() {
                 end={link.to === '/'}
                 className={({ isActive }) =>
                   `text-[15px] font-medium transition-colors ${
-                    solid
-                      ? isActive ? 'text-navy-900 border-b-2 border-steel-500 pb-1' : 'text-slate-600 hover:text-navy-900'
-                      : isActive ? 'text-white border-b-2 border-steel-500 pb-1' : 'text-white/80 hover:text-white'
+                    isActive ? 'text-navy-900 border-b-2 border-steel-500 pb-1' : 'text-slate-600 hover:text-navy-900'
                   }`
                 }
               >
@@ -56,11 +54,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/contact"
-              className={`px-5 py-2.5 rounded-lg text-[14px] font-semibold transition-all duration-200 ${
-                solid
-                  ? 'bg-[#4A8DB7] text-white hover:bg-[#3A7DA7] shadow-sm'
-                  : 'border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10'
-              }`}
+              className="px-5 py-2.5 rounded-lg text-[14px] font-semibold transition-all duration-200 bg-[#4A8DB7] text-white hover:bg-[#3A7DA7] shadow-sm"
             >
               Contact
             </Link>
@@ -72,7 +66,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(true)}
             aria-label="Open menu"
           >
-            <Menu className={`w-6 h-6 ${solid ? 'text-navy-900' : 'text-white'}`} />
+            <Menu className="w-6 h-6 text-navy-900" />
           </button>
         </div>
       </nav>
