@@ -15,9 +15,6 @@ function CompanyStory() {
           <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
             Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada. By combining engineering expertise, real-world field experience, and in-house manufacturing, we deliver practical, results-oriented solutions that enhance safety, productivity, equipment reliability, and cost performance.
           </p>
-          <p className="text-[16px] leading-[28px] text-slate-600">
-            Powered by our proprietary 100-Day Value Cycle, we enable rapid execution and measurable impact. LMI is currently scaling its team and expanding operations to support mining operators nationwide.
-          </p>
         </Reveal>
       </div>
     </section>

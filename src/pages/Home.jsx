@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Shield, Trophy, Handshake, ChevronDown, ArrowRight } from 'lucide-react'
+import { Trophy, ChevronDown, ArrowRight } from 'lucide-react'
 import Button from '../components/ui/Button'
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
@@ -25,25 +25,23 @@ function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-8 h-[2px] bg-steel-500" />
-              <span className="text-[13px] font-semibold tracking-[0.1em] text-steel-400">
-                ENGINEERING EXCELLENCE FOR MINING
-              </span>
-            </div>
-
             <h1 className="font-heading font-extrabold text-white text-[40px] leading-[48px] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px] mb-6">
               Forged in the Field. Engineered to Outperform.
             </h1>
 
-            <p className="text-[17px] lg:text-[18px] leading-[28px] text-slate-300 max-w-xl mb-10">
-              Practical solutions developed by the teams maintaining and operating Canada&apos;s oil sands—driving real performance where it matters most.
+            <p className="text-[17px] lg:text-[18px] leading-[28px] text-slate-300 max-w-xl mb-6">
+              Industry-driven innovations from the people who operate and maintain Canada&apos;s oil sands—delivering measurable performance where it matters most.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <Button to="/contact" variant="primary" className="py-3.5">
-                Get in Touch
-              </Button>
+            <div className="inline-flex items-center gap-2 bg-gold-500/10 text-gold-500 px-4 py-1.5 rounded-full text-[12px] font-bold tracking-wider uppercase">
+              {/* CIM logo/banner placed where the CTA used to be. */}
+              <img
+                src="/images/cim-award.jpg"
+                alt="CIM logo"
+                className="h-4 w-auto object-contain"
+              />
+              <Trophy className="w-3.5 h-3.5" />
+              CIM SAFETY TECHNOLOGY OF THE YEAR — 2024
             </div>
           </div>
 
@@ -70,9 +68,7 @@ function Hero() {
 
 function CredibilityBar() {
   const items = [
-    { icon: Shield, text: '25+ Years in Oil Sands' },
     { icon: Trophy, text: 'CIM Safety Technology of the Year' },
-    { icon: Handshake, text: 'Strategic Partner — Imperial Oil' },
   ]
 
   return (
@@ -103,13 +99,10 @@ function AboutPreview() {
               ABOUT LUMARKO
             </p>
             <h2 className="font-heading font-bold text-navy-700 text-[32px] leading-[40px] lg:text-[38px] lg:leading-[46px] mb-6">
-              Technology-Driven. Field-Proven. Results-Oriented.
+              Frontline-driven, technology-enabled, results-focused.
             </h2>
-            <p className="text-[16px] leading-[26px] text-slate-600 mb-4">
-              Lumarko Mining Innovations (LMI) is a technology-driven company focused on helping large-scale mining operations achieve higher levels of operational excellence. Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada.
-            </p>
             <p className="text-[16px] leading-[26px] text-slate-600 mb-8">
-              Powered by our proprietary 100-Day Value Cycle, we enable rapid execution and measurable impact. LMI is currently scaling its team and expanding operations to support mining operators nationwide.
+              Lumarko Mining Innovations (LMI) is a technology-driven company focused on helping large-scale mining operations achieve higher levels of operational excellence. Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada.
             </p>
             <Link
               to="/about"
@@ -150,11 +143,6 @@ function TrackTopperShowcase() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="inline-flex items-center gap-2 bg-gold-500/10 text-gold-500 px-4 py-1.5 rounded-full text-[12px] font-bold tracking-wider uppercase mb-5">
-              <Trophy className="w-3.5 h-3.5" />
-              CIM SAFETY TECHNOLOGY OF THE YEAR — 2024
-            </div>
-
             <h2 className="font-heading font-bold text-navy-700 text-[32px] leading-[40px] lg:text-[38px] lg:leading-[46px] mb-5">
               TrackTopper System
             </h2>
@@ -176,12 +164,6 @@ function TrackTopperShowcase() {
 function Partnerships() {
   const cards = [
     {
-      logo: '/images/Imperial.jpg',
-      logoAlt: 'Imperial Oil logo',
-      title: 'Strategic Partner — Imperial Oil',
-      text: "Through our partnership with Imperial Oil, we\u2019ve collaborated on multiple game-changing initiatives including the award-winning TrackTopper System. This relationship is built on trust and strong connections from the field level upward.",
-    },
-    {
       logo: '/images/OilSands.jpg',
       logoAlt: 'Oil Sands Expo logo',
       title: 'Advisory Board — Oil Sands Expo',
@@ -196,7 +178,7 @@ function Partnerships() {
           label="PARTNERSHIPS & RECOGNITION"
           heading="Trusted by Industry Leaders"
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {cards.map((card, i) => (
             <Reveal key={i} delay={i * 0.1} className="h-full">
               <Card hover className="h-full">
