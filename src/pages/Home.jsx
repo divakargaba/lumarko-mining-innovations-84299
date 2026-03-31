@@ -33,15 +33,9 @@ function Hero() {
               Industry-driven innovations from the people who operate and maintain Canada&apos;s oil sands—delivering measurable performance where it matters most.
             </p>
 
-            <div className="inline-flex items-center gap-2 bg-gold-500/10 text-gold-500 px-4 py-1.5 rounded-full text-[12px] font-bold tracking-wider uppercase">
-              {/* CIM logo/banner placed where the CTA used to be. */}
-              <img
-                src="/images/cim-award.jpg"
-                alt="CIM logo"
-                className="h-4 w-auto object-contain"
-              />
+            <div className="inline-flex items-center gap-2 bg-gold-500/10 text-gold-500 px-4 py-2 rounded-full text-[12px] font-bold tracking-wider uppercase">
               <Trophy className="w-3.5 h-3.5" />
-              CIM SAFETY TECHNOLOGY OF THE YEAR — 2024
+              Canadian Institute of Mining Safety Technology of the Year for TrackTopper System — 2024
             </div>
           </div>
 
@@ -115,8 +109,8 @@ function AboutPreview() {
           <Reveal delay={0.15}>
             <div className="w-full rounded-xl bg-white border border-slate-200 overflow-hidden flex items-center justify-center p-6" style={{ aspectRatio: '4/3' }}>
               <img
-                src="/images/Lumarko.jpg"
-                alt="Lumarko Mining Innovations team"
+                src="/images/Image.jpg"
+                alt="Lumarko Mining Innovations"
                 className="max-w-full max-h-full object-contain"
               />
             </div>
