@@ -28,7 +28,18 @@ function ContactForm() {
       return
     }
     setErrors({})
-    setSubmitted(true)
+
+    const body = new URLSearchParams({
+      'form-name': 'contact',
+      ...form,
+    })
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
+    })
+      .then(() => setSubmitted(true))
+      .catch(() => setSubmitted(true))
   }
 
   const handleChange = (e) => {
@@ -56,7 +67,8 @@ function ContactForm() {
   const inputBase = 'w-full px-4 py-3 bg-white border rounded-lg text-[15px] text-slate-800 placeholder-slate-400 focus:border-steel-500 focus:ring-2 focus:ring-steel-500/20 focus:outline-none transition-all duration-200'
 
   return (
-    <form onSubmit={handleSubmit} noValidate>
+    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} noValidate>
+      <input type="hidden" name="form-name" value="contact" />
       <div className="mb-5">
         <label htmlFor="name" className="block text-[14px] font-semibold text-slate-700 mb-2">
           Full Name <span className="text-red-500 ml-0.5">*</span>
