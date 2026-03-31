@@ -158,6 +158,12 @@ function TrackTopperShowcase() {
 function Partnerships() {
   const cards = [
     {
+      logo: '/images/Imperial.jpg',
+      logoAlt: 'Imperial Oil logo',
+      title: 'Strategic Partner — Imperial Oil',
+      text: "Through our partnership with Imperial Oil, we\u2019ve collaborated on multiple game-changing initiatives including the award-winning TrackTopper System. This relationship is built on trust and strong connections from the field level upward.",
+    },
+    {
       logo: '/images/OilSands.jpg',
       logoAlt: 'Oil Sands Expo logo',
       title: 'Advisory Board — Oil Sands Expo',
@@ -172,7 +178,7 @@ function Partnerships() {
           label="PARTNERSHIPS & RECOGNITION"
           heading="Trusted by Industry Leaders"
         />
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cards.map((card, i) => (
             <Reveal key={i} delay={i * 0.1} className="h-full">
               <Card hover className="h-full">
