@@ -24,15 +24,15 @@ function HeroImage() {
 function Problem() {
   return (
     <section className="bg-white py-16 lg:py-20">
-      <div className="max-w-3xl mx-auto px-6 sm:px-8">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         <Reveal>
           <h2 className="font-heading font-bold text-navy-700 text-[30px] leading-[38px] mb-6">
             The Problem
           </h2>
-          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+          <p className="text-[16px] leading-[28px] text-slate-600 max-w-3xl mb-5">
             Heavy Equipment Technicians have long been exposed to preventable safety and ergonomic risks when performing maintenance and repair tasks on equipment tracks. Traditional methods—reliant on planks, flimsy boards, coconut mats (which introduce additional hazards for welders), layered mats, and improvised scaffolding—have proven unstable, inconsistent, and inadequate for safe, efficient work. While the industry has historically accepted these risks as part of the job, the underlying problem was clear: the absence of a purpose-built, adaptable, and reliable work platform capable of addressing seasonal track variations, including elevated ice lugs in winter and direct grouser access in summer.
           </p>
-          <p className="text-[16px] leading-[28px] text-slate-600">
+          <p className="text-[16px] leading-[28px] text-slate-600 max-w-3xl">
             This problem has now been addressed through the development of the TrackTopper system—challenging the status quo by delivering a stable, user-friendly, and safety-focused solution that eliminates the need to accept unnecessary risk.
           </p>
         </Reveal>
@@ -77,15 +77,15 @@ function Solution() {
   )
 }
 
-function HumanImpact() {
+function FrontLineImpact() {
   return (
     <section className="bg-white py-16 lg:py-20">
-      <div className="max-w-3xl mx-auto px-6 sm:px-8">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         <Reveal>
           <h2 className="font-heading font-bold text-navy-700 text-[30px] leading-[38px] mb-6">
-            The Human Impact
+            The Front-Line Impact
           </h2>
-          <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
+          <p className="text-[16px] leading-[28px] text-slate-600 max-w-3xl mb-5">
             The introduction of the TrackTopper System has fundamentally changed how Heavy Equipment Technicians feel at work — replacing uncertainty with confidence, and risk with trust.
           </p>
           <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
@@ -171,7 +171,7 @@ export default function TrackTopper() {
       <HeroImage />
       <Problem />
       <Solution />
-      <HumanImpact />
+      <FrontLineImpact />
       <Award />
       <CTABanner
         heading="Want to see how TrackTopper can work on your site?"

@@ -22,7 +22,7 @@ const commitments = [
 function Intro() {
   return (
     <section className="bg-white py-20 lg:py-28">
-      <div className="max-w-3xl mx-auto px-6 sm:px-8">
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 text-center">
         <Reveal>
           <h2 className="font-heading font-bold text-navy-900 text-[28px] lg:text-[32px] mb-6">
             Accelerating Innovation. Delivering Measurable Value.
@@ -47,7 +47,7 @@ function WhyItMatters() {
     <section className="bg-[#F3F4F6] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <Reveal>
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="font-heading font-bold text-navy-900 text-[28px] lg:text-[32px] mb-4">
               Why It Matters
             </h2>
@@ -129,7 +129,7 @@ function Pipeline() {
           </Reveal>
         </div>
         <Reveal delay={0.3}>
-          <p className="mt-10 text-[16px] leading-[28px] text-slate-600 max-w-3xl">
+          <p className="mt-10 text-[16px] leading-[28px] text-slate-600">
             Each initiative is grounded in continuous improvement methodologies—ensuring innovation is not a one-time event, but a repeatable, scalable capability.
           </p>
         </Reveal>

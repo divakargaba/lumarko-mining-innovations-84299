@@ -30,7 +30,7 @@ function Hero() {
             </h1>
 
             <p className="text-[17px] lg:text-[18px] leading-[28px] text-slate-300 max-w-xl mb-6">
-              Industry-driven innovations from the people who operate and maintain Canada&apos;s oil sands—delivering measurable performance where it matters most.
+              Front-line driven innovations from the people who operate and maintain Canada&apos;s oil sands—delivering measurable performance where it matters most.
             </p>
 
             <div className="inline-flex items-center gap-2 bg-gold-500/10 text-gold-500 px-4 py-2 rounded-full text-[12px] font-bold tracking-wider uppercase">
@@ -96,7 +96,7 @@ function AboutPreview() {
               Frontline-driven, technology-enabled, results-focused.
             </h2>
             <p className="text-[16px] leading-[26px] text-slate-600 mb-8">
-              Lumarko Mining Innovations (LMI) is a technology-driven company focused on helping large-scale mining producers achieve higher levels of operational excellence. Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada.
+              Lumarko Mining Innovations (LMI) is a front-line driven company focused on helping large-scale mining producers achieve higher levels of operational excellence. Our flagship innovation, the TrackTopper System — recognized with the 2024 Mine Safety Technology Award by the Canadian Institute of Mining — improves maintenance safety and efficiency across heavy equipment fleets at mine sites across Canada.
             </p>
             <Link
               to="/about"
@@ -167,7 +167,7 @@ function Partnerships() {
       logo: '/images/OilSands.jpg',
       logoAlt: 'Oil Sands Expo logo',
       title: 'Advisory Board — Oil Sands Expo',
-      text: "Tony Bessey serves on the Advisory Board for Canada\u2019s leading oil sands event, leveraging 25+ years of industry experience to help shape the Expo\u2019s direction and advance the future of the oil sands sector.",
+      text: "Tony serves on the Advisory Board for Canada\u2019s leading oil sands event, leveraging 25+ years of industry experience to help shape the Expo\u2019s direction and advance the future of the oil sands sector.",
     },
   ]
 

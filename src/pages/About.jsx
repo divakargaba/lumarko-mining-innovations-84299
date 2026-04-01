@@ -7,7 +7,7 @@ import Reveal from '../components/ui/Reveal'
 function CompanyStory() {
   return (
     <section className="bg-white py-20 lg:py-28">
-      <div className="max-w-3xl mx-auto px-6 sm:px-8">
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 text-center">
         <Reveal>
           <p className="text-[16px] leading-[28px] text-slate-600 mb-5">
             By combining engineering expertise, real-world field experience, and in-house manufacturing, we deliver practical, results-oriented solutions that enhance safety, productivity, equipment reliability, and cost performance.
@@ -22,7 +22,7 @@ function Values() {
   const pillars = [
     {
       icon: Shield,
-      title: 'Safety First',
+      title: 'Safety as a Value',
       text: 'Every solution we build starts with one question: does it make people safer? Our TrackTopper System exists because we saw a safety gap and built something to close it.',
     },
     {
@@ -72,7 +72,6 @@ export default function About() {
 
       <PageHeader
         heading="About Lumarko Mining Innovations"
-        subtitle="Built from the field. Driven by results."
       />
       <CompanyStory />
       <Values />

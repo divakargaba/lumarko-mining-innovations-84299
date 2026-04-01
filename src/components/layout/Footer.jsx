@@ -19,9 +19,6 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <LMILogo />
-            <p className="mt-4 text-[15px] text-slate-500 leading-relaxed">
-              Operational excellence for mining. Built from the field up.
-            </p>
             <p className="mt-4 text-[14px] text-slate-400">
               #271, 220 TaigaNova Crescent<br />
               Fort McMurray, Alberta T9K 0N9
