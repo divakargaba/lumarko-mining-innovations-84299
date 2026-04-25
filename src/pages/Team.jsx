@@ -23,7 +23,7 @@ const team = [
   {
     name: 'Shawn Carnes',
     title: 'VP of Operational Excellence',
-    photo: '/images/Shawn.jpg',
+    photo: '/images/Shawn.webp',
     bio: 'Former Skeleton athlete, Shawn brings a high-performance mindset built on precision, resilience, and execution under pressure. With 15+ years in maintenance, planning, and continuous improvement, he has led major operational excellence initiatives at CNRL and Suncor. At Lumarko, he drives execution governance, capital discipline, and value realization, aligning strategy with consistent, high-impact operational outcomes.',
     linkedin: 'https://www.linkedin.com/in/shawn-carnes-5a22428a/',
   },
